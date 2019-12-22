@@ -25,3 +25,10 @@ class Calefaccion(metaclass=ABCMeta):
     @abstractmethod
     def quemarCombustible(self):
         pass
+
+
+class Sensor(metaclass=ABCMeta):
+
+    @abstractmethod
+    def leer(self):
+        pass
