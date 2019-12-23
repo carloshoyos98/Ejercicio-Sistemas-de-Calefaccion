@@ -82,3 +82,21 @@ class Chimenea(Calefaccion):
 
     def quemarCombustible(self):
         self.combustible -= 1
+
+# Segunda implementación de Calefaccion, SueloRadiante
+
+
+class SueloRadiante(Calefaccion):
+
+    def encender(self):
+        self.quemarCombustible()
+        print('Metiendo gas a tus pies')
+
+    def apagar(self):
+        print('Apagando el suelo')
+
+    def cargarCombustible(self, cantidad):
+        self.combustible = cantidad
+
+    def quemarCombustible(self):
+        self.combustible -= 2
