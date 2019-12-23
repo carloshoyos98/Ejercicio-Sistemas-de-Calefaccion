@@ -138,3 +138,15 @@ chimenea.cargarCombustible(5)
 # Encendemos el sistema con la temperatura que esperamos
 
 sistema_chimenea.on(22)
+
+# Ahora repetimos la implementación para un suelo radiante y un termometro
+
+suelo = SueloRadiante()
+termometro = Termometro()
+
+print(termometro.leer())
+
+sistema_suelo = SistemaCalefaccion(suelo, termometro)
+
+suelo.cargarCombustible(10)
+sistema_suelo.on(22)
