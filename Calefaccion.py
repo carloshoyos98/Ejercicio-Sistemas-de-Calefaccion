@@ -44,8 +44,8 @@ class SistemaCalefaccion():
     # Definimos los atributos de la clase
 
     def __init__(self, calefaccion, sensor):
-        self.calefaccion = calefaccion
-        self.sensor = sensor
+        self.__calefaccion = calefaccion
+        self.__sensor = sensor
         self.temperaturaObjetivo = None
 
     def on(self, temperaturaObjetivo):
