@@ -26,6 +26,8 @@ class Calefaccion(metaclass=ABCMeta):
     def quemarCombustible(self):
         pass
 
+# La clase Sensor también será una interfaz para otras clases.
+
 
 class Sensor(metaclass=ABCMeta):
 
