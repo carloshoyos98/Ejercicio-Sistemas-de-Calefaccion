@@ -34,3 +34,26 @@ class Sensor(metaclass=ABCMeta):
     @abstractmethod
     def leer(self):
         pass
+
+# La clase SistemaCalefaccion será la clase principal, que no debe depender
+# de las imlpementaciones de Calefaccion y Sensor.
+
+
+class SistemaCalefaccion():
+
+    # Definimos los atributos de la clase
+
+    def __init__(self, calefaccion, sensor):
+        self.calefaccion = calefaccion
+        self.sensor = sensor
+        self.temperaturaObjetivo = None
+
+    def on(self, temperaturaObjetivo):
+
+        self.temperaturaObjetivo = temperaturaObjetivo
+
+        while(self.__sensor.leer() < self.temperaturaObjetivo) & (self.__calefaccion.combustible > 0):
+            self.__calefaccion.encender()
+            print('Quedan : ', self.__calefaccion.combustible)
+
+        self.off()
