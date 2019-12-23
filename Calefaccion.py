@@ -60,3 +60,25 @@ class SistemaCalefaccion():
 
     def off(self):
         self.__calefaccion.apagar()
+
+# Primera implementación de Calefaccion
+# Clase Chimenea que hereda de Calefaccion
+
+
+class Chimenea(Calefaccion):
+
+    # Hay que definir todos los métodos abstractos de Calefaccion
+    # para poder instanciar Chimenea
+
+    def encender(self):
+        self.quemarCombustible()
+        print('Dando calor y ardiendo con todo')
+
+    def apagar(self):
+        print('Apagando la chimenea')
+
+    def cargarCombustible(self, cantidad):
+        self.combustible = cantidad
+
+    def quemarCombustible(self):
+        self.combustible -= 1
