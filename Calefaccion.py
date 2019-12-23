@@ -57,3 +57,6 @@ class SistemaCalefaccion():
             print('Quedan : ', self.__calefaccion.combustible)
 
         self.off()
+
+    def off(self):
+        self.__calefaccion.apagar()
