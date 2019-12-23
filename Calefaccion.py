@@ -114,3 +114,27 @@ class Termostato(Sensor):
 
     def leer(self):
         return 15
+
+# Ahora implementamos todo el sistema con:
+# Chimenea y termostato
+# Creamos un objeto de cada clase
+
+
+chimenea = Chimenea()
+termo = Termostato()
+
+# Sacamos por pantalla la temperatura
+
+print(termo.leer())
+
+# Instanciamos el sistema de calefaccion
+
+sistema_chimenea = SistemaCalefaccion(chimenea, termo)
+
+# Damos valor a la cantidad de combustible
+
+chimenea.cargarCombustible(5)
+
+# Encendemos el sistema con la temperatura que esperamos
+
+sistema_chimenea.on(22)
