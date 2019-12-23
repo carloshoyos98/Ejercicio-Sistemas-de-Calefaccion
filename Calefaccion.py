@@ -100,3 +100,17 @@ class SueloRadiante(Calefaccion):
 
     def quemarCombustible(self):
         self.combustible -= 2
+
+# Implementaciones de Sensor
+
+
+class Termometro(Sensor):
+
+    def leer(self):
+        return 15
+
+
+class Termostato(Sensor):
+
+    def leer(self):
+        return 15
